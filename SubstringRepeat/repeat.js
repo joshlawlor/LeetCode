@@ -1,28 +1,33 @@
-var lengthOfLongestSubstring = function(s="abcabcbb") {
-    console.log(s)
-    let checklist = []
-    let repeatCounter = 0
-    for(let i = 0; i < s.length+1; i++){
+var lengthOfLongestSubstring = function (s = "") {
+  let checklist = [];
+  let answerCounter = [];
+  let letterCount = 0;
+  if(s == ""){
+    return console.log(0)
+}
 
-
-
-
-
-        
-        console.log(checklist)
-        
-        if(checklist.includes(s[i])){
-            console.log('^^^^')
-            repeatCounter=(checklist.length)
-        }
-        checklist.push(s[i])
-
+  for (let i = 0; i < s.length + 1; i++) {
+    
+    if (checklist.includes(s[i])) {
+      answerCounter.push(letterCount);
+      letterCount = 0;
     }
-    console.log(repeatCounter)
+
+    if (i == s.length) {
+      //Find largest value in answerCounter
+
+      answerCounter.sort();
+      answer = answerCounter[answerCounter.length - 1];
+      return answer;
+    }
+
+    letterCount++;
+
+    checklist.push(s[i]);
+  }
 };
 
-lengthOfLongestSubstring()
-
+lengthOfLongestSubstring();
 
 // Have it count alongeach number, if it repeats, store that count in an array
 // Then clear your count
