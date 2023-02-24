@@ -1,4 +1,4 @@
-var lengthOfLongestSubstring = function (s = " ") {
+var lengthOfLongestSubstring = function (s = "ababa") {
   let checklist = [];
   let answerCounter = [];
   let letterCount = 0;
@@ -18,7 +18,7 @@ var lengthOfLongestSubstring = function (s = " ") {
 
       answerCounter.sort();
       answer = answerCounter[answerCounter.length - 1];
-      return answer;
+      return console.log(answer);
     }
 
     letterCount++;
