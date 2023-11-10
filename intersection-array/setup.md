@@ -25,5 +25,13 @@ Constraints:
 Follow up:
 
 What if the given array is already sorted? How would you optimize your algorithm?
+
+    If the arrays are sorted, you can use a two-pointer approach to iterate through both arrays simultaneously, updating pointers based on element comparisons.
+
 What if nums1's size is small compared to nums2's size? Which algorithm is better?
+
+    In this case, using a hash map to count occurrences is still a reasonable approach, as it doesn't rely on the size of the arrays and generally has linear time complexity.
+
 What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
+
+    If the elements are on disk and memory is limited, you can use an external sort or divide-and-conquer strategy to process chunks of the arrays at a time, reducing the memory footprint.
