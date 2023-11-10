@@ -22,7 +22,7 @@ pattern =   (
 
 
 # Find all matches of the pattern in the HTML content
-matches = re.findall(pattern, html_content,  re.DOTALL)
+matches = re.findall(pattern, html_content)
 
 # Extract the valid characters and join them to form the URL
 url = ''.join([char for char in matches])
