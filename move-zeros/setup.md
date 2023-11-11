@@ -23,3 +23,7 @@ Constraints:
  
 
 Follow up: Could you minimize the total number of operations done?
+
+    The provided solution already minimizes the number of operations by iterating through the array once and moving non-zero elements to the front. Since the problem requires an in-place solution without making a copy of the array, this approach is optimal in terms of minimizing operations.
+
+    The time complexity of the solution is O(n), where n is the length of the array, making it an efficient and optimal solution for the given constraints.
